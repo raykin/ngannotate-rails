@@ -36,7 +36,7 @@ module Ngannotate
         end
       else
         initializer "ngannotate-rails.add_ngannotate_postprocessor", :group => :all do |app|
-          app.assets.register_postprocessor 'application/javascript', Ngannotate::Processor
+          app.assets.register_bundle_processor 'application/javascript', Ngannotate::Processor
         end
       end
     end
