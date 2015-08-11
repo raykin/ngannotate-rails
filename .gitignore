@@ -19,3 +19,5 @@ tmp
 node_modules
 *.log
 **/public/assets
+.ruby-version
+
