@@ -32,7 +32,7 @@ module Ngannotate
 
       if config.respond_to?(:assets)
         config.assets.configure do |env|
-          env.register_postprocessor 'application/javascript', Ngannotate::Processor
+          env.register_bundle_processor 'application/javascript', Ngannotate::Processor
         end
       else
         initializer "ngannotate-rails.add_ngannotate_postprocessor", :group => :all do |app|
